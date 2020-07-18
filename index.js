@@ -184,6 +184,20 @@ http
             .catch((err) => console.log(err));
         })
         .catch((error) => console.log(error));
+    } else if (req.url === "/") {
+      res.writeHead(200, { "Content-Type": "application/json; text/html" });
+      res.end(
+        JSON.stringify({
+          hello: "welcome to this very simple backend for my portfolio.",
+          "functional routes": 3,
+          routes: [
+            "/github, where I use the github API for a projects section on my own website. For this I starred a few of my own projects and then filtered them by author (in this case myself) to display their main characteristics (name, repository/demo links, tags, description, etc).",
+            "/spotify, where I use the Spotify API to retrieve 10 random songs of my most listened playlist.",
+            "/pocket, where I use the Pocket API to retrieve 10 random saved articles.",
+          ],
+          feedback: "pmlzoe@gmail.com",
+        })
+      );
     } else {
       console.log("404");
       res.writeHead(404, { "Content-Type": "application/json; text/html" });
