@@ -27,3 +27,6 @@ yarn-error.log*
 .DS_Store
 
 .vercel
+.prettierrc
+.eslintrc.json
+app.js
