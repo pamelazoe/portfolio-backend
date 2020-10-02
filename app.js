@@ -83,3 +83,38 @@ fetch("https://getpocket.com/v3/get", {
 // //   console.log("Server running at http://127.0.0.1:3000/");
 // // });
 // // /repos/:owner/:repo/branches
+
+// {
+//   added_at: '2020-09-25T18:27:14Z',
+//   added_by: {
+//     external_urls: [Object],
+//     href: 'https://api.spotify.com/v1/users/zoepamela',
+//     id: 'zoepamela',
+//     type: 'user',
+//     uri: 'spotify:user:zoepamela'
+//   },
+//   is_local: false,
+//   primary_color: null,
+//   track: {
+//     album: [Object],
+//     artists: [Array],
+//     available_markets: [Array],
+//     disc_number: 1,
+//     duration_ms: 302363,
+//     episode: false,
+//     explicit: true,
+//     external_ids: [Object],
+//     external_urls: [Object],
+//     href: 'https://api.spotify.com/v1/tracks/6rVExngxHtsUSdjmv7Xdxy',
+//     id: '6rVExngxHtsUSdjmv7Xdxy',
+//     is_local: false,
+//     name: 'Dough & Damani',
+//     popularity: 56,
+//     preview_url: 'https://p.scdn.co/mp3-preview/ab04d0cd821db4e1d5e364a502b107ab7a82da39?cid=96f5dde3bd8a49e2bbd5e1340eff9502',
+//     track: true,
+//     track_number: 4,
+//     type: 'track',
+//     uri: 'spotify:track:6rVExngxHtsUSdjmv7Xdxy'
+//   },
+//   video_thumbnail: { url: null }
+// }

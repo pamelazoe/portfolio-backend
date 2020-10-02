@@ -32,20 +32,27 @@ http
             const spotList = Object.entries(playlist.body.tracks.items).map(
               (g) => g[1].track
             );
-            // console.log(spotList)
+            // console.log(playlist.body.external_urls.spotify);
+            console.log(playlist.body.tracks.items);
+            // console.log(Object.entries(playlist.body));
             const shuffled = spotList.sort(() => 0.5 - Math.random());
             const selected = shuffled.slice(0, 10);
             const track = selected.map((x) => x.name);
             const album = selected.map((x) => x.album.name);
             const artist = selected.map((x) => x.artists.map((y) => y.name));
             const image = selected.map((x) => x.album.images);
+            const spotifyUri = selected.map((x) => x.uri);
             const object = track.map((_, i) => ({
               track: track[i],
+              spotifyUri: spotifyUri[i],
               album: album[i],
               artist: artist[i],
               image: image[i],
+              ytSearch: `https://www.youtube.com/results?search_query=${
+                track[i]
+              } ${artist[i].map((x) => x).join(" ")}`,
             }));
-            // console.log(object)
+            // console.log(object);
             // return data.body.tracks.items;
             res.end(JSON.stringify(object));
           });
@@ -106,7 +113,7 @@ http
           //   ...selectedLinks[i],
           //   itemAuthors: authors[i],
           // }));
-          // res.end(JSON.stringify(authors));
+          res.end(JSON.stringify(authors));
         })
         .catch((err) => console.log(err));
     } else if (req.url === "/github") {
@@ -184,6 +191,20 @@ http
             .catch((err) => console.log(err));
         })
         .catch((error) => console.log(error));
+    } else if (req.url === "/") {
+      res.writeHead(200, { "Content-Type": "application/json; text/html" });
+      res.end(
+        JSON.stringify({
+          hello: "welcome to this very simple backend for my portfolio.",
+          "functional routes": 3,
+          routes: [
+            "/github, where I use the github API for a projects section on my own website. For this I starred a few of my own projects and then filtered them by author (in this case myself) to display their main characteristics (name, repository/demo links, tags, description, etc).",
+            "/spotify, where I use the Spotify API to retrieve 10 random songs of my most listened playlist.",
+            "/pocket, where I use the Pocket API to retrieve 10 random saved articles.",
+          ],
+          feedback: "pmlzoe@gmail.com",
+        })
+      );
     } else {
       console.log("404");
       res.writeHead(404, { "Content-Type": "application/json; text/html" });

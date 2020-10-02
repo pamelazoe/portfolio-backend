@@ -10,8 +10,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "deploy:now": "now",
-    "deploy:now:prod": "now --prod"
+    "deploy:vercel": "vercel deploy",
+    "deploy:prod": "vercel --prod"
   },
   "keywords": [],
   "author": "",
