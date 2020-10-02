@@ -96,6 +96,7 @@ http
           const shuffled = pocketList.sort(() => 0.5 - Math.random());
           const selectedLinks = shuffled.slice(0, 10);
           const authors = selectedLinks
+<<<<<<< HEAD
             .map((y) =>
               y.authors
                 ? y.authors
@@ -114,6 +115,26 @@ http
           //   itemAuthors: authors[i],
           // }));
           res.end(JSON.stringify(authors));
+=======
+            // .map((y) =>
+            //   y.authors
+            //     ? y.authors
+            //     : {
+            //         "000000000": {
+            //           name: "No Author",
+            //         },
+            //       }
+            // )
+            // .map((u) => Object.entries(u))
+            // .reduce((a, b) => a.concat(b), [])
+            // .map((t) => t[1]);
+            .map((h) => h.name);
+          const pocketData = authors.map((_, i) => ({
+            ...selectedLinks[i],
+            itemAuthors: authors[i],
+          }));
+          res.end(JSON.stringify(pocketData));
+>>>>>>> 1dcdecdff2b37179ea9e143b7120b649f933173c
         })
         .catch((err) => console.log(err));
     } else if (req.url === "/github") {
