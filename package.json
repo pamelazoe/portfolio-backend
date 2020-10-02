@@ -19,7 +19,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "spotify-web-api-node": "^4.0.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@vercel/node": "^1.7.1",
