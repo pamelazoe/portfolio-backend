@@ -1,15 +1,10 @@
 {
-  "now": {
-    "engines": {
-      "node": "*"
-    }
-  },
   "name": "portfolio-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/api/index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "vercel dev",
     "deploy:vercel": "vercel deploy",
     "deploy:prod": "vercel --prod"
   },
@@ -18,27 +13,27 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "spotify-web-api-node": "^4.0.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1",
+    "spotify-web-api-node": "^4.0.0"
   },
   "devDependencies": {
-    "@vercel/node": "^1.7.1",
-    "eslint": "^7.2.0",
+    "@vercel/node": "^1.8.4",
+    "eslint": "^7.12.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "^7.21.5",
     "github-api": "^3.3.0",
     "node-getpocket": "^1.0.0",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.6",
     "parcel-bundler": "^1.12.3",
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.2"
   },
   "engines": {
-    "node": "^10"
+    "node": "12.x"
   }
 }
