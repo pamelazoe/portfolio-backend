@@ -31,3 +31,4 @@ yarn-error.log*
 .eslintrc.json
 app.js
 **/.DS_Store
+test.js
